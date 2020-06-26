@@ -1,0 +1,24 @@
+
+{% extends "myapp/base.html" %}
+{% block content %}
+<div><article class="media content-section">
+          <div class="media-body">
+            <div class="article-metadata">
+            </div>
+          </div>
+        </article></div>
+Home
+    {% for post in posts %}
+        <article class="media content-section">
+          <div class="media-body">
+            <div class="article-metadata">
+              <a class="mr-2" href="#">{{ post.apartmentName }}</a>
+              <small class="text-muted">{{ post.building }}</small>
+            </div>
+            <h2><a class="article-title" href="{% url 'room_detail' post.id %}">{{ post.rooms }}</a></h2>
+            <p class="article-content">{{ post.address }}</p>
+          </div>
+        </article>
+    {% endfor %}
+
+{% endblock content %}

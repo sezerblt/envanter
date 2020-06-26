@@ -1,0 +1,16 @@
+{% extends "myapp/base.html" %}
+{% block content %}
+    <div class="content-section">
+        <form method="POST">
+            {% csrf_token %}
+            <fieldset class="form-group">
+                <legend class="border-bottom mb-4">Daireyi Sil </legend>
+                <h2>Bu Oge silinsin"{{ object.title }}"</h2>
+            </fieldset>
+            <div class="form-group">
+                <button class="btn btn-outline-danger" type="submit">Sil,Eminim</button>
+                <a class="btn btn-outline-secondary" href="{% url 'post-detail' object.id %}">Vazgeç</a>
+            </div>
+        </form>
+    </div>
+{% endblock content %}

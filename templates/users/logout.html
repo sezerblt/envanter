@@ -1,0 +1,9 @@
+{% extends "myapp/base.html" %}
+{% block content %}
+    <h2>Çıkış Yapıyorsunuz...</h2>
+    <div class="border-top pt-3">
+        <small class="text-muted">
+            <a href="{% url 'login' %}">tekrar Giriş</a>
+        </small>
+    </div>
+{% endblock content %}
